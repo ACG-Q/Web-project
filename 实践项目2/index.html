@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>视频播放器</title>
+	<link rel="stylesheet" href="css/video.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/video.js"></script>
+</head>
+<body>
+	<figure>
+		<!-- <div class="bbk">视频播放器</div> -->
+		<figcaption class="bbk">视频播放器</figcaption>
+		<div class="v-player load">
+			<video src="video/15 多媒体播放器布局简介.mp4" class="video-p">视频</video>
+			<!-- <video src="https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_AnimatedShot_Bastion_TheLastBastion.mp4" class="video-p">视频</video> -->
+			<div class="menu">
+				<!-- 播放键  fa-play fa-pause -->
+				<a href="javascript:;" class="btn btn-1">
+					<i class="fa fa-play" aria-hidden="true"></i>
+				</a>
+				<!-- 进度条 -->
+				<div class="btn btn-2">
+					<div class="line"></div>
+					<div class="bar"></div>
+				</div>
+				<!-- 时间 -->
+				<div class="btn-3">
+					<span class="current">00:00:00</span> / <span class="total">00:00:00</span>
+				</div>
+				<!-- 音量 fa-volume-up >50 |fa-volume-down 1-50 |fa-volume-off 0 -->
+				<a href="javascript:;" class="btn-4">
+					<i class="fa fa-volume-up" aria-hidden="true"></i>
+				</a>
+				<div class="volume">
+					<div class="volume-line"></div>
+					<div class="volume-bar"></div>
+				</div>
+				<!-- 全屏键  fa-arrows-alt fa-compress-->
+				<a href="javascript:;" class="btn btn-5">
+					<i class="fa fa-arrows-alt" aria-hidden="true"></i>
+				</a>
+			</div>
+			<span class="tis"></span>
+		</div>
+	</figure>
+	<div class="add">
+		<ul>
+			<li>视频链接；<input type="text" name="addurl" id="url" value="https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_AnimatedShot_Bastion_TheLastBastion.mp4"><input type="button" name="" id="btnUrl" value="播放"></li>
+			<!-- <li>本地文件：<input type="file" name="addfile" id="file"><input type="button" name="" id="btnFile" value="播放"></li> -->
+		</ul>
+	</div>
+	
+
+</body>
+</html>

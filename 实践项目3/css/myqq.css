@@ -1,0 +1,239 @@
+/*背景样式*/
+#bg {
+	width: 1000px;
+	height: 1000px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%); /*水平居中 垂直居中*/
+	/*background-color: pink;*/
+	transition: all 3s; /*过渡最好本身上写*/
+}
+.rotate {
+	transform: translate(-50%,-50%) rotateZ(-60deg)!important;
+}
+/*球的基本样式*/
+.orb {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+/*row1球的位置*/
+.row1 .orb1 {
+	margin-top: -450px;
+	margin-left: -63px;
+}
+.row1 .orb2 {
+	margin-top: -390px;
+	margin-left: 730px;
+}
+.row1 .orb3 {
+	margin-top: 350px;
+	margin-left: -530px;
+}
+/*row2球的位置*/
+.row2 .orb1 {
+	margin-top: -300px;
+	margin-left: -500px;
+}
+.row2 .orb2 {
+	margin-top: 300px;
+	margin-left: 500px;
+}
+.row2 .orb3 {
+	margin-top: -2680px;
+	margin-left: 0;
+}
+
+/*row3球的位置*/
+.row3 .orb1 {
+	margin-top: -200px;
+	margin-left: -900px;
+}
+.row3 .orb2 {
+	margin-top: -250px;
+	margin-left: 300px;
+}
+/*球的渐变背景*/
+.row1 div,
+.row2 div,
+.row3 div {
+	/*background: -webkit-linear-gradient(起始位置,起始颜色,结束颜色);*/
+	background: -webkit-linear-gradient(top, #fff, #dedede);
+	border-radius: 50%;
+}
+/*球的大小*/
+.row1 .orb {
+	width: 60px;
+	height: 60px;
+}
+.row2 .orb {
+	width: 200px;
+	height: 200px;
+}
+.row3 .orb {
+	width: 500px;
+	height: 500px;
+}
+
+
+/*第一屏样式制作*/
+.section1 {
+	perspective: 1000px; /*透视效果*/
+}
+
+/*1-结束状态*/
+.in .p1 {
+	transform: translate(-50%,-50%) translateZ(0px);
+}
+
+/*1-进入状态*/
+.p1 {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%) translateZ(800px);
+	background: url(../images/skin.gif) no-repeat;
+	width: 800px;
+	height: 320px;
+	transition: all 3s;
+}
+/*第二屏样式制作*/
+.section2 {
+	perspective: 1000px;
+}
+.p2 {
+	width: 316px;
+	height: 360px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) translateZ(-6000px) scale(0.1);
+	/*scale 缩放*/
+	transition: all 3s;
+}
+/*第三屏样式制作*/
+.section3 {
+	perspective: 1000px;
+}
+.p3 {
+	position: absolute;
+	width: 1440px;
+	height: 760px;
+	top: 50%;
+	left: 50%;
+	margin-left: -270px;
+	margin-top: -284px;
+	background-color: white;
+	border: 1px solid #ccc;
+	/*transform: translateZ(-50px) rotateX(45deg);*/
+	transform: translateZ(1200px) rotateX(120deg);
+	transition: all 4s;
+}
+.tab {
+	position: absolute;
+	left: 30px;
+	top: -20px;
+}
+.shadow {
+	position: absolute;
+	left: -25px;
+	top: -20px;
+}
+.plw {
+	position: absolute;
+    left: 0;
+    top: 110px;
+    background-color: #c5c5c542;
+    width: 100%;
+    height: 100px;
+}
+.u1,
+.u2,
+.u3 {
+	position: absolute;
+	top: 33px;
+}
+.u1 {
+	left: 45px;
+}
+.u2 {
+	left: 110px;
+}
+.u3 {
+	left: 170px;
+}
+.title3 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -412px;
+	margin-top: -10px;
+	transition: all 4s;
+	transform: translateZ(1200px) rotateY(-60deg);
+}
+/*第四屏样式制作*/
+.section4 {
+	perspective: 1000px;
+}
+.p4 {
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 900px;
+	transition: all 4s;
+    height: 600px;
+}
+.p2pop1,
+.p2pop2,
+.p2pop3,
+.p2pop4 {
+	position: absolute;
+}
+.p2pop1 {
+	top: 20px;
+    left: 196px;
+}
+.p2pop2 {
+	top: 240px;
+    left: 190px;
+}
+.p2pop3 {
+	left: 230px;
+    top: 20px;
+}
+.p2pop4 {
+	left: 500px;
+	top: 100px;
+}
+.p2t1 {
+	position: absolute;
+	left: 50%;
+	transition: all 4s;
+    transform: translate(-50%,-50%);
+	top: 50%;
+	margin-top: 125px;
+}
+
+/*动画组*/
+.row1 div {
+	animation: orbmove 80s linear infinite;
+}
+.row2 div {
+	animation: orbmove 60s linear infinite;
+}
+.row3 div {
+	animation: orbmove 80s linear infinite;
+}
+@keyframes orbmove{
+	form {
+		transform: translateX(0) rotate(0deg);
+		/*rotate(0deg) 旋转0度*/
+		/*transform 等于相对定位，从自己现在位置开始移动*/
+	}
+	to {
+		transform: translateX(-2000px) rotate(3600deg);
+	}
+}

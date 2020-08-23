@@ -1,0 +1,477 @@
+/*
+* @Author: Alex
+* @Date:   2020-08-04 17:49:42
+* @Last Modified by:   Alex
+* @Last Modified time: 2020-08-05 10:28:04
+*/
+html,body,.section {
+	min-height: 600px;
+	min-width: 1000px;
+	/*防止过于缩放变形*/
+}
+/*项目导航样式*/
+#fp-nav ul li a span {
+	/*background-color: #f40!important;*/
+	/*!important 提交层叠性*/
+}
+.next {
+	position: absolute;
+	bottom: 120px;
+	right: 10%;
+	z-index: 999;
+}
+
+/*8个背景样式*/
+/*第一屏幕制作 start*/
+.section1 {
+	background: #fadd67 url(../images/t1fpyqfltdxxaiulhh-990-600.png) no-repeat center bottom;
+	/*
+	no-repeat 不重复 
+	center 水平居中
+	bottom 垂直向下
+	*/
+}
+.fly {
+	position: absolute;/*absolute 生成绝对定位的元素*/
+	right: 20%;
+	top: 10%;
+}
+.shirt01 {
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	bottom: 350px;
+}
+.goods {
+	position: absolute;
+	left: 50%;
+	margin-left: -420px;
+	bottom: 145px;
+}
+/*第一屏幕制作 end*/
+/*第二屏幕制作 start*/
+.section2 {
+	background: #84a2d4 url(../images/t1zdgpfi8exxca6rfn-2000-600.png) no-repeat center bottom;
+	z-index: 2;
+}
+.computer {
+	width: 990px;
+	height: 500px;
+	position: absolute;
+	left: 50%;
+	/*margin-left: 495px;  和下面同理*/
+	transform: translateX(-50%);
+	/*	
+	transform       旋转 div 元素
+	translateX(x)	定义转换，只是用 X 轴的值。
+	translateY(y)	定义转换，只是用 Y 轴的值。
+	*/
+	/*background-color: rgba(0,0,0,.3);*/
+	bottom: 0;
+}
+.search {
+	width: 222px;
+	height: 45px;
+	background: url(../images/search.png) no-repeat;
+	right: -30px;
+	bottom: 300px;
+	position: absolute;
+	display: none;
+}
+.search-words {
+	position: absolute;
+	right: 30px;
+	top: 2px;
+	opacity: 0;    /*因为后面我们要做淡入淡出的效果，所以我们要用透明度 不要用display*/
+	/*opacity 透明度*/
+}
+.search-02-1 {
+	position: absolute;
+	bottom: 300px;
+	right: 370px;
+	display: none;
+}
+.goods-02 {
+	height: 20px;
+	position: absolute;
+	bottom: 217px;
+	right: 270px;
+	display: none;
+}
+.words-01,.words-02 {
+	position: absolute;
+	left: 50%;
+	bottom: 550px;
+	transform: translateX(-50%);
+}
+.words-02 {
+	opacity: 0;
+}
+.shirt-02 {
+	width: 100px;
+    position: absolute;
+    bottom: 340px;
+    left: 385px;
+    display: none;
+    z-index: 10;
+}
+.cover {
+	position: absolute;
+    bottom: 334px;
+    right: 505px;
+    width: 101px;
+    height: 90px;
+    z-index: 5;
+    background-color: #fff;
+    display: none;
+}
+/*第二屏幕制作 end*/
+/*第三屏幕制作 start*/
+.section3 {
+	background: #ef674d;
+	z-index: 1;
+}
+.main {
+	position: absolute;
+	width: 700px;
+	height: 500px;
+	background:url(../images/main.png) no-repeat center center;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 50px;
+}
+.select {
+	width: 300px;
+	height: 250px;
+	position: absolute;
+	bottom: 0;
+	right: 8px;
+}
+.img {
+	position: absolute;
+	top: 0;
+}
+.img-01-a {
+	opacity: 0;
+}
+.btn {
+	position: absolute;
+	bottom: 10px;
+}
+.btn-01-a {
+	opacity: 0;
+}
+.t1f,
+.shirt-03 {
+	position: absolute;
+	left: 115px;
+	bottom: 200px;
+	display: none;
+}
+/*第三屏幕制作 end*/
+/*第四屏幕制作 start*/
+.section4 {
+	background: #fed url(../images/t1iresfnxaxxca6rfn-2000-600.png) no-repeat center bottom;
+}
+.cloud {
+	position: absolute;
+	left: 50%;
+	bottom: 520px;
+}
+.word {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 500px;
+}
+.word-04-a {
+	opacity: 0;
+}
+.car {
+	width: 500px;
+	position: absolute;
+	/*background-color: pink;*/
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 50;
+}
+.car-img {
+	position: absolute;
+	bottom: 200px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: -1;
+	display: none;
+}
+.note {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: pink;
+	bottom: 180px;
+	display: none;
+}
+.note-img {
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	opacity: 0;
+}
+/*第四屏幕制作 end*/
+/*第五屏幕制作 start*/
+.section5 {
+	background: #d04759 url(../images/t1yisqfa4exxa3gmkg-2000-1500.png);
+	/*overflow: hidden;*/ /*超出部分隐藏*/
+	z-index: 1;
+}
+.words-05 {
+	position: absolute;
+	left: 20%;
+	top: 0;
+}
+.card-05 {
+	position: absolute;
+	left: 20%;
+	bottom: 200px;
+	z-index: 10;
+}
+.order-05 {
+	position: absolute;
+	left: 27%;
+	bottom: 270px;
+}
+.t1f-05 {
+	position: absolute;;
+	bottom: 1000px;
+	left: 25%;
+	display: none;
+}
+.mouse {
+	position: absolute;
+	right: 20%;
+	bottom: 200px;
+}
+.mouse-05-a {
+	opacity: 0;
+}
+.hand-05 {
+	position: absolute;
+	right: 23%;
+	bottom: -375px;
+}
+.overFlow {  /* 切掉 鼠标小尾巴 */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/*第五屏幕制作 end*/
+/*第六屏幕制作 start*/
+.section6 {
+	background: #84d8ed url(../images/t1dvj.fn0gxxb0_fua-2500-600.png) no-repeat 25% 100%;
+}
+.box-06 {
+	position: absolute;
+	left: 123px;
+	bottom: 500px;
+}
+.car-06 {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	z-index: 50;
+}
+.cloud-06 {
+	position: absolute;
+	left: 50%;
+	bottom: 550px;
+}
+/*云 start*/
+.cloud-06-1 {
+	animation: cloud6-1 30s linear infinite;
+}
+.cloud-06-2 {
+	left: 80%;
+	animation: cloud6-2 35s linear infinite;
+}
+@keyframes cloud6-1 {
+	50% {
+		left: 15%;
+	}
+}
+@keyframes cloud6-2 {
+	50% {
+		left: 50%;
+	}
+}
+/*云 end*/
+.pop-06 {
+	position: absolute;
+	bottom: 119px;
+	right: 48%;
+	display: none;
+	z-index: 50;
+}
+.boy {
+	position: absolute;
+	right: 50%;
+	bottom: 0;
+	height: 100px;
+}
+.girl {
+	position: absolute;
+	right: 315px;
+	height: 123px;
+	bottom: 116px;
+	display: none;
+	z-index: 50;
+}
+.door {
+	position: absolute;
+	right: 285px;
+	bottom: 116px;
+	opacity: 0;
+}
+.pop-07 {
+	position: absolute;
+	right: 445px;
+	bottom: 400px;
+	z-index: 40;
+	display: none;
+}
+.words-06-a {
+	position: absolute;
+	left: 10%;
+	bottom: 479px;
+	display: none;
+}
+/*第六屏幕制作 end*/
+/*第七屏幕制作 start*/
+.section7 {
+	background: #8ac060 url(../images/t1wf1tfctaxxa3gmkg-2000-1500.png) no-repeat 50% 100%;
+}
+.star {
+	position: absolute;
+	left: 50%;
+	bottom: 439px;
+	margin-left: -295px;
+	width: 0;
+	height: 20px;
+	background: url(../images/star.png) no-repeat;
+	background-size: 97px;
+}
+.good-07 {
+	position: absolute;
+	bottom: 382px;
+	left: 50%;
+	margin-left: -289px;
+	display: none;
+}
+/*第七屏幕制作 end*/
+/*第八屏幕制作 start*/
+.section8 {
+	background: url(../images/ksgw.png);
+}
+.beginShoping {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 365px;
+}
+.btn-08-a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.again {
+	position: absolute;
+	left: 50%;
+	bottom: 403px;
+	margin-left: 240px;
+	cursor: pointer;
+	/*cursor 显示的光标的类型*/
+}
+.hand-08 {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
+/*第八屏幕制作 end*/
+
+/*直接进入购物中心*/
+.go {
+	position: fixed;
+	top: 5%;
+	right: 5%;
+}
+
+/*动画组*/
+.next_undown {
+	animation: next .6s linear infinite;
+}
+@keyframes next {
+	0% {
+		bottom: 120px;
+	}
+	50% {
+		bottom: 100px;
+	}
+	100% {
+		bottom: 120px;
+	}
+}
+.updown {
+	animation: fly 3s linear infinite;
+	/*animatino:动画名称 动画时间 运动曲线 何时开始 播放次数 是否反方向*/
+	/*
+	linear 匀速
+	infinite 循环
+	*/
+
+}
+.shirt-updown {
+	animation: shirt01 3s linear infinite;
+}
+@keyframes fly { 
+	/*类似于JS的声明函数 function*/
+	0% {
+		top: 10%;
+	}
+	50% {
+		top: 20%;
+	}
+	100% {
+		top: 10%;
+	}
+}
+@keyframes shirt01 { 
+	0% {/*可省略*/
+		bottom: 335px;
+	}
+	50% {
+		bottom: 360px;
+	}
+	100% {
+		bottom: 335px;
+	}
+}
+
+/*云彩第一组*/
+.cloud-back1 {
+	animation: cloud-back1 60s linear infinite;
+}
+@keyframes cloud-back1 {
+	0% {/*可省略*/
+		left: 50%;
+	}
+	50% {
+		left: -10%;
+	}
+	100% {
+		left: 50%;
+	}
+}
